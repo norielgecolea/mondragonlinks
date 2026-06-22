@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Noriel Gecolea's Links",
   description: "My world.",
   openGraph: {
-    title: "Noriel Gecolea's Links",
+    title: "Mondragon Links",
     description: "My world.",
     url: "https://links.norielgecolea.com",
     siteName: "Noriel Gecolea's Links",
