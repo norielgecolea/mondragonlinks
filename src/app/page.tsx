@@ -89,9 +89,6 @@ export default function Home() {
             <nav className="flex shrink-0 items-center gap-1.5" aria-label="Company actions">
               {[
                 { label: "Website", icon: FaGlobe, href: "https://mondragonfoods.norielgecolea.com" },
-                { label: "Facebook", icon: FaFacebookF, href: "https://facebook.norielgecolea.com" },
-                { label: "Email", icon: FaEnvelope, href: "mailto:norielgecolea23@gmail.com" },
-                { label: "Contact", icon: FaPhoneAlt, href: "tel:+639128240698" },
               ].map((action) => {
                 const Icon = action.icon;
 
