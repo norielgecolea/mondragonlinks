@@ -111,8 +111,8 @@ export default function Home() {
 
           <section className="relative z-10 bg-[linear-gradient(135deg,#1b4d2a_0%,#397946_52%,#7cab72_100%)] px-6 pb-7 pt-8 text-center text-white">
             <Image
-              src="/mecartoon.png"
-              alt="Noriel Fernando Gecolea"
+              src="/me.png"
+              alt="Mai Larona"
               width={112}
               height={112}
               className="mx-auto h-28 w-28 rounded-full border-[6px] border-white bg-white object-cover opacity-100 shadow-xl ring-1 ring-white/80"
@@ -121,10 +121,10 @@ export default function Home() {
               
             </p>
             <h1 className="mt-2 text-3xl font-black leading-tight text-white">
-              Noriel Gecolea
+              Mhai Larona
             </h1>
             <p className="mt-1 text-sm font-semibold tracking-wide text-white">
-             Computer Engineer
+             Marketing Manager
             </p>
             <p className="mx-auto mt-4 max-w-[19rem] text-xs font-medium leading-6 text-white">
               Helping connect people with Mondragon Foods through clear communication,
