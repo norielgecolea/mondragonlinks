@@ -2,6 +2,7 @@
 import "./globals.css";
 import Image from "next/image";
 import {
+  FaCheck,
   FaEnvelope,
   FaFacebookF,
   FaFileAlt,
@@ -20,7 +21,7 @@ type VerseDetails = {
 };
 
 const links = [
-  { name: "Portfolio", icon: FaGlobe, href: "https://www.norielgecolea.com" },
+  { name: "Portfolio", icon: FaGlobe, href: "https://mondragonfoods.norielgecolea.com" },
   { name: "Resume", icon: FaFileAlt, href: "https://www.norielgecolea.com/NORIEL_GECOLEA_RESUME.pdf" },
   { name: "Email", icon: FaEnvelope, href: "mailto:norielgecolea23@gmail.com" },
   { name: "Phone", icon: FaPhoneAlt, href: "tel:+639128240698" },
@@ -53,42 +54,85 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#eef7ee] px-4 py-8 font-hanken text-[#14351f] sm:px-6 sm:py-12">
       <section className="mx-auto flex w-full max-w-[460px] flex-col gap-4">
-        <header className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_24px_70px_rgba(35,93,45,0.14)]">
-          <div className="flex items-center justify-between gap-4 border-b border-green-900/10 px-5 py-5">
-            <div className="flex items-center gap-3">
-              <div className="logo-placeholder" aria-label="Mondragon Foods logo placeholder">MF</div>
-              <div>
-                <p className="text-base font-black uppercase leading-tight tracking-wide text-[#14351f]">
-                  Mondragon Foods
-                </p>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#4b9a58]">
-                  Brand Placeholder
-                </p>
+        <header className="relative overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/55 shadow-[0_24px_70px_rgba(35,93,45,0.16)] backdrop-blur-xl">
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.92)_0%,rgba(234,248,235,0.74)_44%,rgba(255,255,255,0.48)_100%)]" />
+          <div className="pointer-events-none absolute -left-10 -top-12 h-36 w-36 rounded-full bg-[#8fd19a]/40 blur-2xl" />
+          <div className="pointer-events-none absolute right-0 top-0 h-24 w-32 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.9),transparent_68%)]" />
+          <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#72b77d]/60 to-transparent" />
+
+          <div className="relative z-10 flex items-center gap-4 px-4 py-5 sm:px-5">
+            <div className="relative shrink-0">
+              <div className="absolute inset-0 rounded-full bg-[#71c77e]/55 blur-xl" />
+              <div className="relative h-14 w-14 overflow-hidden rounded-full border border-white/80 bg-white p-2 shadow-[0_14px_34px_rgba(57,121,70,0.24)] ring-1 ring-[#d5ecd7]">
+                <Image
+                  src="/mondragon_logo.png"
+                  alt="Mondragon Foods Logo"
+                  fill
+                  className="object-contain p-2"
+                  priority
+                />
               </div>
             </div>
-            <span className="rounded-full bg-[#e6f5e8] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#397946]">
-              Links
-            </span>
+
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2">
+                <p className="truncate text-[15px] font-black uppercase leading-tight tracking-wide text-[#14351f] sm:text-base">
+                  Mondragon
+                </p>
+                <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full border border-white/80 bg-[#397946] text-white shadow-[0_8px_18px_rgba(57,121,70,0.28)]">
+                  <FaCheck className="h-2.5 w-2.5" />
+                </span>
+              </div>
+              <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-[#4b9a58]">
+                Food Products
+              </p>
+            </div>
+
+            <nav className="flex shrink-0 items-center gap-1.5" aria-label="Company actions">
+              {[
+                { label: "Website", icon: FaGlobe, href: "https://mondragonfoods.norielgecolea.com" },
+                { label: "Facebook", icon: FaFacebookF, href: "https://facebook.norielgecolea.com" },
+                { label: "Email", icon: FaEnvelope, href: "mailto:norielgecolea23@gmail.com" },
+                { label: "Contact", icon: FaPhoneAlt, href: "tel:+639128240698" },
+              ].map((action) => {
+                const Icon = action.icon;
+
+                return (
+                  <a
+                    key={action.label}
+                    href={action.href}
+                    aria-label={action.label}
+                    title={action.label}
+                    target={action.href.startsWith("http") ? "_blank" : undefined}
+                    rel={action.href.startsWith("http") ? "noreferrer" : undefined}
+                    className="grid h-9 w-9 place-items-center rounded-full border border-white/70 bg-white/70 text-[#2f6f3b] shadow-[0_10px_24px_rgba(35,93,45,0.12)] backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#9bcf9f] hover:bg-white hover:text-[#1b4d2a] active:scale-95"
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                  </a>
+                );
+              })}
+            </nav>
           </div>
 
-          <section className="bg-[linear-gradient(135deg,#1b4d2a_0%,#397946_52%,#7cab72_100%)] px-6 pb-7 pt-8 text-center text-white">
+          <section className="relative z-10 bg-[linear-gradient(135deg,#1b4d2a_0%,#397946_52%,#7cab72_100%)] px-6 pb-7 pt-8 text-center text-white">
             <Image
               src="/mecartoon.png"
               alt="Noriel Fernando Gecolea"
               width={112}
               height={112}
-              className="mx-auto h-28 w-28 rounded-full border-[6px] border-white bg-white object-cover shadow-xl"
+              className="mx-auto h-28 w-28 rounded-full border-[6px] border-white bg-white object-cover opacity-100 shadow-xl ring-1 ring-white/80"
             />
-            <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.3em] text-green-100">
+            <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.3em] text-white">
               Company I Represent
             </p>
             <h1 className="mt-2 text-3xl font-black leading-tight text-white">
               Noriel Gecolea
             </h1>
-            <p className="mt-1 text-sm font-semibold tracking-wide text-green-100">
+            <p className="mt-1 text-sm font-semibold tracking-wide text-white">
               Mondragon Foods Representative
             </p>
-            <p className="mx-auto mt-4 max-w-[19rem] text-xs leading-6 text-green-50/90">
+            <p className="mx-auto mt-4 max-w-[19rem] text-xs font-medium leading-6 text-white">
               Helping connect people with Mondragon Foods through clear communication,
               reliable support, and an easy way to reach me.
             </p>
