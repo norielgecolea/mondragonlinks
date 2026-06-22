@@ -4,6 +4,9 @@
 :root {
   --background: #18181b;
   --foreground: #ededed;
+  --font-geist-sans: Arial, Helvetica, sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-hanken-grotesk: Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
@@ -30,9 +33,26 @@
 }
 
 body {
-  background: #18181b;
+  background: #7cab72;
   color: var(--foreground);
   
+}
+
+.logo-placeholder {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 2px solid #397946;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, transparent 45%, rgba(57, 121, 70, 0.18) 45% 55%, transparent 55%),
+    radial-gradient(circle at 50% 18%, #ffffff 0 18%, transparent 19%),
+    #eef9ed;
+  color: #235d2d;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
 .widdest{
