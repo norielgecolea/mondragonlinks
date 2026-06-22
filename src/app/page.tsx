@@ -22,13 +22,10 @@ type VerseDetails = {
 
 const links = [
   { name: "Portfolio", icon: FaGlobe, href: "https://mondragonfoods.norielgecolea.com" },
-  { name: "Resume", icon: FaFileAlt, href: "https://www.norielgecolea.com/NORIEL_GECOLEA_RESUME.pdf" },
   { name: "Email", icon: FaEnvelope, href: "mailto:norielgecolea23@gmail.com" },
   { name: "Phone", icon: FaPhoneAlt, href: "tel:+639128240698" },
   { name: "WhatsApp", icon: FaWhatsapp, href: "https://wa.me/639128240698" },
-  { name: "LinkedIn", icon: FaLinkedinIn, href: "#" },
   { name: "Facebook", icon: FaFacebookF, href: "https://facebook.norielgecolea.com" },
-  { name: "Instagram", icon: FaInstagram, href: "https://instagram.norielgecolea.com/" },
 ];
 
 export default function Home() {
@@ -124,13 +121,13 @@ export default function Home() {
               className="mx-auto h-28 w-28 rounded-full border-[6px] border-white bg-white object-cover opacity-100 shadow-xl ring-1 ring-white/80"
             />
             <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.3em] text-white">
-              Company I Represent
+              
             </p>
             <h1 className="mt-2 text-3xl font-black leading-tight text-white">
               Noriel Gecolea
             </h1>
             <p className="mt-1 text-sm font-semibold tracking-wide text-white">
-              Mondragon Foods Representative
+             Computer Engineer
             </p>
             <p className="mx-auto mt-4 max-w-[19rem] text-xs font-medium leading-6 text-white">
               Helping connect people with Mondragon Foods through clear communication,
@@ -182,8 +179,7 @@ export default function Home() {
         </section>
 
         <footer className="pt-2 text-center text-[10px] text-[#4b6f54]">
-          <VisitorCounter />
-          <span>© 2025 Noriel Gecolea. All rights reserved.</span>
+          <span>© 2026 Mondragon Food Products. All rights reserved.</span>
         </footer>
       </section>
     </main>
