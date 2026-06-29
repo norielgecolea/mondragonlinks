@@ -109,7 +109,7 @@ export default function Home() {
             </nav>
           </div>
 
-          <section className="relative z-10 bg-[linear-gradient(135deg,#1b4d2a_0%,#397946_52%,#7cab72_100%)] px-6 pb-7 pt-8 text-center text-white">
+          <section className="overflow-hidden relative z-10 bg-[linear-gradient(135deg,#1b4d2a_0%,#397946_52%,#7cab72_100%)] px-6 pb-7 pt-8 text-center text-white">
             <Image
               src="/me.png"
               alt="Mai Larona"
